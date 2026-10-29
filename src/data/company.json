@@ -1,0 +1,38 @@
+{
+  "name": "Osos Al Benaa",
+  "legalName": "Osos Al Benaa Company For Metal Industry",
+  "brand": "OBC",
+  "established": "2022",
+  "location": "Riyadh, Saudi Arabia",
+  "address": "Istanbul Street, Sulay, Riyadh, KSA",
+  "phone": "+966 56 370 2823",
+  "phoneDigits": "966563702823",
+  "whatsappVerified": false,
+  "email": "info@ososalbenaa.com",
+  "website": "https://www.ososalbenaa.com",
+  "intro": "From our base in Riyadh, we design, manufacture and supply cable management systems for electrical and construction projects.",
+  "about": "Established in 2022, Osos Al Benaa brings cable trays, ladders, trunking and support accessories together in one practical range. Our manufacturing scope includes brackets, frames and custom fabrication for project-specific requirements.",
+  "source": "Brochure.pdf, pages 4\u20135 and 100",
+  "applications": [
+    "Industrial & power",
+    "Commercial buildings",
+    "Healthcare facilities",
+    "Residential projects",
+    "Pumping & substations"
+  ],
+  "capabilities": [
+    {
+      "title": "Cable management",
+      "body": "Cable trays, ladders, trunking and accessories for organised cable routing."
+    },
+    {
+      "title": "Project-specific fabrication",
+      "body": "Brackets and frames developed around the needs of your installation."
+    },
+    {
+      "title": "Technical conversations",
+      "body": "Discuss dimensions, materials and finishes with our team before enquiring."
+    }
+  ],
+  "wordmark": "OSOS AL BENAA"
+}

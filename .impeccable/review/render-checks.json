@@ -1,0 +1,576 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/hero.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/trays.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/ladders.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/channels.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/baskets.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-41.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/system.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-1.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-6.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/baskets.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-41.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/hero.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/trays.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/ladders.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/channels.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/baskets.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-41.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/system.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-1.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-6.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/baskets.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-41.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/about/",
+    "width": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/system.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/about/",
+    "width": 390,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/system.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/products/",
+    "width": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-1.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-2.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-4.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-5.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-6.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-7.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-9.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-11.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-12.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-13.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-14.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-15.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-16.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-17.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-18.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-19.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-20.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-21.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-22.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-23.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-24.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-25.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-26.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/baskets.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-41.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/products/",
+    "width": 390,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-1.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-2.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-4.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-5.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-6.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-7.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-8.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-9.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-10.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-11.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-12.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-13.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-14.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-15.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-16.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-17.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-18.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-19.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-20.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-21.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-22.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-23.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-24.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-25.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-26.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/baskets.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-fallback.svg",
+        "loaded": true
+      },
+      {
+        "src": "/images/product-41.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/products/cable-tray-and-fittings-type-tf/",
+    "width": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-1.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-2.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-4.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/products/cable-tray-and-fittings-type-tf/",
+    "width": 390,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-1.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-2.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-3.webp",
+        "loaded": true
+      },
+      {
+        "src": "/images/tray-4.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/contact/",
+    "width": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      }
+    ]
+  },
+  {
+    "route": "/contact/",
+    "width": 390,
+    "overflow": false,
+    "images": [
+      {
+        "src": "/images/logo.webp",
+        "loaded": true
+      }
+    ]
+  }
+]

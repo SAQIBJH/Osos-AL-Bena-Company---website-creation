@@ -1,0 +1,145 @@
+{
+  "nav": {
+    "open": "Open menu",
+    "close": "Close menu",
+    "skip": "Skip to content"
+  },
+  "actions": {
+    "explore": "Explore products",
+    "whatsapp": "Enquire on WhatsApp",
+    "view": "View specifications",
+    "all": "View all products",
+    "contact": "Talk to our team",
+    "back": "Back to products"
+  },
+  "home": {
+    "title": "The support behind every connection.",
+    "intro": "Cable trays, ladders and support systems for your next project. Manufactured and supplied from Riyadh, Saudi Arabia.",
+    "imageCaption": "Cable management in context · Illustrative image",
+    "rangeTitle": "A connected range.\nFor every route.",
+    "rangeIntro": "From straight runs to the smallest fitting, find the components that bring your installation together.",
+    "aboutTitle": "Made for the way\nyou build.",
+    "aboutLink": "Get to know OBC",
+    "featuredTitle": "Explore the details.",
+    "featuredIntro": "A closer look at our cable management range.",
+    "location": "Riyadh, Saudi Arabia",
+    "since": "Established in 2022"
+  },
+  "about": {
+    "title": "Practical engineering.\nPersonal commitment.",
+    "intro": "Cable management starts with understanding the installation. We bring manufacturing, fabrication and product support into the same conversation.",
+    "scopeTitle": "From the first route\nto the final fixing.",
+    "applicationsTitle": "Supporting different environments.",
+    "applicationsIntro": "Our brochure describes applications across electrical, construction and industrial projects.",
+    "drawingCaption": "Cable tray system · Technical illustration from the OBC brochure"
+  },
+  "catalog": {
+    "title": "Find your next connection.",
+    "intro": "Explore cable management products by system, material and finish. Open any product for its supplied technical specifications.",
+    "search": "Search products",
+    "placeholder": "Product name, model or part number",
+    "filters": "Filters",
+    "family": "Product family",
+    "material": "Material",
+    "finish": "Finish",
+    "brand": "Brand",
+    "clear": "Clear all",
+    "results": "products",
+    "selected": "Active filters",
+    "emptyTitle": "No products match your selection.",
+    "emptyBody": "Try a different search or remove a filter to explore more products.",
+    "close": "Close filters",
+    "show": "Show products",
+    "clearSearch": "Clear search",
+    "remove": "Remove",
+    "noJs": "Search and filtering require JavaScript. All products are available below.",
+    "imageUnavailable": "Product image unavailable"
+  },
+  "product": {
+    "specs": "Technical specifications",
+    "manufacturer": "Manufacturer",
+    "origin": "Country of origin",
+    "brand": "Brand",
+    "descriptionFallback": "Discuss this product and your installation requirements with our team.",
+    "missing": "Need a dimension or a different finish? Ask our team about your requirements.",
+    "related": "Part of the same system.",
+    "illustration": "Technical illustration from the supplied brochure. Confirm dimensions and configuration when enquiring.",
+    "enquire": "Enquire about this product",
+    "model": "Model",
+    "material": "Material",
+    "finish": "Finish",
+    "partNumber": "Part number"
+  },
+  "contact": {
+    "title": "Let’s talk\nabout your project.",
+    "intro": "Tell us what you need. A product, a drawing or a few dimensions is a good place to start.",
+    "formTitle": "Start a conversation.",
+    "handoff": "This form opens a draft in WhatsApp. Review it there and send when you’re ready.",
+    "name": "Your name",
+    "phone": "Phone number (optional)",
+    "company": "Company (optional)",
+    "product": "Product (optional)",
+    "choose": "Choose a product",
+    "message": "What do you need?",
+    "messageHint": "Include the size, finish and quantity if you know them.",
+    "submit": "Continue to WhatsApp",
+    "required": "Required",
+    "error": "Please complete the required fields.",
+    "address": "Visit or get in touch",
+    "call": "Call our team",
+    "email": "Email",
+    "privacy": "Your enquiry is not stored on this website. WhatsApp’s own privacy terms apply when you continue.",
+    "noJs": "You can also use the direct WhatsApp link or phone number. The form requires JavaScript."
+  },
+  "cta": {
+    "title": "Your project.\nOur next conversation.",
+    "body": "Need help selecting a product or discussing a custom fabrication? Let’s work through the details."
+  },
+  "footer": {
+    "description": "Cable management systems.\nA practical foundation for your project.",
+    "navigation": "Explore",
+    "contact": "Get in touch",
+    "copyright": "Osos Al Benaa Company For Metal Industry.",
+    "note": "Product specifications are supplied for reference. Confirm suitability and requirements with our team."
+  },
+  "notFound": {
+    "title": "This connection is missing.",
+    "body": "The page you’re looking for could not be found. Explore our products or return to the homepage.",
+    "home": "Return home"
+  },
+  "seo": {
+    "homeTitle": "OBC | Cable Management Systems in Riyadh",
+    "homeDescription": "Explore cable trays, ladders, trunking and support accessories from Osos Al Benaa in Riyadh, Saudi Arabia.",
+    "aboutTitle": "About Osos Al Benaa | OBC",
+    "aboutDescription": "Meet Osos Al Benaa, a Riyadh-based cable management manufacturer and supplier established in 2022.",
+    "productsTitle": "Products | OBC Cable Management",
+    "productsDescription": "Browse 41 cable management products. Find cable trays, ladders, trunking, supports, baskets and cable cleats.",
+    "contactTitle": "Contact OBC | Discuss Your Project",
+    "contactDescription": "Contact Osos Al Benaa in Riyadh. Discuss product specifications and project requirements through WhatsApp or phone."
+  },
+  "common": {
+    "home": "Home",
+    "about": "About us",
+    "products": "Products",
+    "contact": "Contact us",
+    "breadcrumb": "Breadcrumb",
+    "mainNavigation": "Main navigation",
+    "homeLink": "home",
+    "brandTagline": "METAL INDUSTRY",
+    "contactMark": "LET’S BUILD\nTHE CONNECTION.",
+    "heroLabel": "CABLE MANAGEMENT SYSTEMS"
+  },
+  "images": {
+    "heroAlt": "Illustrative view of galvanized cable management systems in an industrial interior",
+    "systemAlt": "Cable tray system technical drawing from the supplied OBC brochure"
+  },
+  "messages": {
+    "general": "Hello OBC, I would like to discuss my project.",
+    "product": "Hello OBC, I am interested in {product}. Please share specifications and availability.",
+    "intro": "Hello OBC, my name is {name}.",
+    "company": "Company: {value}",
+    "phone": "Phone: {value}",
+    "productField": "Product: {value}",
+    "requirements": "Requirements: {value}"
+  }
+}
