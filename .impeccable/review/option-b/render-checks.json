@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/",
+    "width": 1440,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/",
+    "width": 390,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/about/",
+    "width": 1440,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/about/",
+    "width": 390,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/products/",
+    "width": 1440,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/products/",
+    "width": 390,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/products/cable-tray-and-fittings-type-tf/",
+    "width": 1440,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/products/cable-tray-and-fittings-type-tf/",
+    "width": 390,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/contact/",
+    "width": 1440,
+    "overflow": false,
+    "unloaded": 0
+  },
+  {
+    "path": "/contact/",
+    "width": 390,
+    "overflow": false,
+    "unloaded": 0
+  }
+]

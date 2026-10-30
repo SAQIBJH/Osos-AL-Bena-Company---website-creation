@@ -59,5 +59,17 @@
       "description": "Cable restraint products with supplied specifications."
     }
   ],
-  "copyrightYear": 2026
+  "copyrightYear": 2026,
+  "heroSlides": [
+    {
+      "image": "/images/hero.webp",
+      "srcSet": "/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero.webp 1440w",
+      "avifSrcSet": "/images/hero-640.avif 640w, /images/hero-960.avif 960w, /images/hero.avif 1440w"
+    },
+    {
+      "image": "/images/hero-secondary.webp",
+      "srcSet": "/images/hero-secondary-640.webp 640w, /images/hero-secondary-960.webp 960w, /images/hero-secondary.webp 1440w",
+      "avifSrcSet": "/images/hero-secondary-640.avif 640w, /images/hero-secondary-960.avif 960w, /images/hero-secondary.avif 1440w"
+    }
+  ]
 }

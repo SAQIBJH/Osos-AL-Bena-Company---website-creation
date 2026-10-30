@@ -2,6 +2,9 @@
 name: OBC industrial catalog
 description: A practical, brand-led cable management catalog
 colors:
+  brand-red: "#ED1C23"
+  brand-blue: "#2D2F91"
+  canvas: "#F3F4F7"
   action: "#C81520"
   action-hover: "#A9111B"
   ink: "#17202A"
@@ -22,7 +25,9 @@ typography:
     lineHeight: 1.6
 rounded:
   button: "3px"
-  card: "4px"
+  card: "8px"
+  panel: "12px"
+  panel-mobile: "10px"
 spacing:
   sm: "8px"
   md: "16px"
@@ -35,9 +40,15 @@ components:
     rounded: "{rounded.button}"
     padding: "12px 22px"
     height: "50px"
+  button-white:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.button}"
+    padding: "12px 24px"
+    height: "52px"
 ---
 
-# OBC website — design specification draft
+# OBC website — design specification
 
 Status: implemented after the user explicitly authorized proceeding with the brand-derived direction despite blocked external reference sites. English launch; data and UI dictionaries separated for future localization. The code and generated HTML are available locally. External visual references were not reviewed. See VALIDATION.md for completed checks and release limitations.
 
@@ -94,9 +105,9 @@ Proposed navigation families, derived from names and requiring explicit mapping 
 
 Several dimensions, standards and descriptions are blank. Null means not supplied, not zero or 'not applicable'. Hide empty specification rows and offer 'Ask about specifications'. Many OBC rows share finish text; do not propagate standards into products with empty standard fields. A project-specific ER-type approval is not general product certification. Rung-space and diameter ranges are strings with units, not stock variants.
 
-## 4. Proposed visual direction
+## 4. Approved visual direction
 
-Implemented direction: an industrial catalog with generous white space, strong product silhouettes and restrained brand-red wayfinding. Visual hierarchy comes from typography, scale, alignment and real product detail. Keep one composition grammar across all pages. The user authorized this direction without a live external reference, as recorded in section 2.
+Approved Option B: a red-led industrial catalog with a full-width illustrative hero behind white content, followed by separate boxed white sections on a pale canvas. Accessible red actions lead; brand-blue headings and restrained logo-red accents support them. Subtle panel and product-card shadows provide separation. The user selected this refinement after authorizing the brand-derived direction without live external references.
 
 Home is a persuasion surface; catalog is a task surface; technical detail is a reading surface. The identity stays consistent while information density changes. Avoid generic three-benefit icon cards, decorative dashboards, glass panels, stock handshakes, neon glow, ornamental grids and oversized empty slogans.
 
@@ -104,12 +115,12 @@ Home is a persuasion surface; catalog is a task surface; technical detail is a r
 
 Logo pixel samples from the supplied PDF raster: red approximately #ED1C23; blue #2D2F91. These are sampled raster colors, not an official brand standard. Preserve the actual full-color logo. Do not recolor its letters or reproduce it as typed text.
 
-| Token | Proposed value | Exclusive purpose |
+| Token | Implemented value | Purpose |
 | --- | --- | --- |
 | brand-red | #ED1C23 | Logo-derived small accents and decorative rules; not white normal-text buttons |
 | action | #C81520 | Primary CTA, selected filter border/text, active navigation indicator |
 | action-hover | #A9111B | Hover/pressed primary action |
-| brand-blue | #2D2F91 | Logo and restrained section identification; no arbitrary category color coding |
+| brand-blue | #2D2F91 | Logo, section headings and focus; no arbitrary category color coding |
 | ink | #17202A | Headings, body and high-contrast UI |
 | muted | #5B6470 | Supporting text and field hints |
 | surface | #FFFFFF | Main canvas and forms |
@@ -125,17 +136,17 @@ Calculated WCAG contrast: white/action #C81520 = 5.86:1; ink/white = 16.45:1; mu
 
 ### Typography
 
-Proposed: self-hosted Barlow Condensed 600 for display headings and Barlow 400/500/600 for body, navigation and controls, subject to license/source verification during implementation. System sans-serif fallback must remain legible before fonts load. Maximum two families, subset to launch language, WOFF2, font-display swap. No all-caps paragraphs. Keep product names in source capitalization; wrap rather than truncate important identifiers.
+Implemented: self-hosted Barlow Condensed 600 for display headings and Barlow 400/500/600 for body, navigation and controls, with source licenses retained. System sans-serif fallback must remain legible before fonts load. Maximum two families, subset to launch language, WOFF2, font-display swap. No all-caps paragraphs. Keep product names in source capitalization; wrap rather than truncate important identifiers.
 
 | Role | Mobile | Desktop | Line height |
 | --- | --- | --- | --- |
-| H1 | 40px | fluid to 72px | 1.05 |
-| H2 | 32px | 48px | 1.12 |
-| H3 / product title | 22px | 24px | 1.25 |
+| H1 / hero | 52px hero; 40px product detail | hero fluid 48–84px; general 44–80px | 1.05 |
+| H2 | responsive by component | fluid 33.6–56px | 1.05 |
+| H3 / product title | 26px featured cards | 24px product / 25.6px general | 1.18 product / 1.05 general |
 | Intro | 18px | 20px | 1.55 |
 | Body / form / specification | 16px | 16px | 1.6 |
-| Metadata | 14px | 14px | 1.5 |
-| Buttons / nav | 16px | 16px | 1.25 |
+| Metadata | 12px | 12px | 1.6 |
+| Buttons / nav | 15px hero / 16px standard | 16px buttons / 15px nav | 1.3 buttons |
 
 Limit paragraphs to 62–70 characters per line. H1 max 16–20 characters per line where practical; do not insert device-specific hard line breaks. Use tabular numerals in specifications. Maintain 200% text zoom and 400% browser zoom/reflow.
 
@@ -144,16 +155,17 @@ Limit paragraphs to 62–70 characters per line. H1 max 16–20 characters per l
 - Maximum content width 1280px; centered. Outer gutters 20px below 640px, 32px from 640px, 48px from 1024px. At 320px retain 16px minimum gutters.
 - 12-column desktop grid, 8-column tablet planning grid, 4-column mobile grid. Implement with CSS Grid without unnecessary layout abstractions.
 - Spacing tokens: 4, 8, 12, 16, 24, 32, 48, 64, 80, 112px. Related label/control gap 8px; field gap 24px; heading-to-copy 16–24px; section padding 56px mobile / 96px desktop.
-- Cards: 20px mobile / 24px desktop padding; 24px grid gap. Corner radius 4px for buttons/cards, 6px for fields. Pills alone use a full radius because they represent removable selections.
-- Buttons minimum 48px high, horizontal padding 20px, label/icon gap 8px. Inputs minimum 48px high, padding 12px 16px. Interactive targets minimum 44×44px.
-- Header 72px mobile / 88px desktop; logo maximum 120×44 / 152×56px, object-fit contain with intrinsic ratio and 12px minimum clearspace. No initial full-screen splash.
-- No decorative shadows on every card. Product cards use a 1px border and change border/focus state; overlays may have one subtle elevation shadow.
+- Product and family cards have 8px corners; product bodies use 22px padding, family cards 24px desktop / 20px mobile. Buttons and form fields have 3px corners, search 4px. Removable selection pills use full corners. Boxed panels have 12px corners; the wide range, featured, applications, related and enquiry panels reduce to 10px below 640px. Other boxed panels retain 12px.
+- Standard buttons have a 50px minimum height, 12px 22px padding and 12px icon gap. Hero buttons are at least 52px with 24px horizontal padding (18px below 640px). Form inputs are at least 48px tall with 12px padding. Interactive targets are at least 44×44px.
+- Header inner height is 76px mobile / 80px compact desktop / 96px desktop; preserve the supplied logo intrinsic ratio with object-fit contain. No initial full-screen splash.
+- Boxed panels use `0 6px 24px rgb(23 32 42 / 6%)`; product and family cards use `0 3px 12px rgb(23 32 42 / 5%)`. Product hover increases to `0 8px 22px rgb(23 32 42 / 9%)` and changes its border. Keep this elevation subtle.
+- Below the full-width hero, wide boxed sections are capped at 1360px with 32px outer gutters and 32px separation. Below 640px, these panels have 12px outer gutters, 20px separation and 16px internal gutters. The company panel uses the standard 1280px container.
 
 ## 5. Imagery specification
 
 | Asset | Source/export target | Display behavior |
 | --- | --- | --- |
-| Home industrial image | 1920×1280, 3:2, responsive 640/960/1440/1920 widths | Dedicated image region, cover with recorded focal point; do not obscure products with copy |
+| Home industrial slider | Two 3:2 scenes, responsive 640/960/1440 widths | Full-width background cover, 1.5px blur and a solid `rgb(9 13 25 / 67%)` dark overlay behind white copy; centered crop, 62% horizontal focal point on mobile |
 | Category/product card | 960×720, 4:3 stage | Actual product contained within stage; 10% breathing room |
 | Product detail | 1600×1200 stage, 4:3 | Contain, never crop technical geometry; optional accessible enlarged view |
 | About factory image | 1600×1200, 4:3 | Authentic approved photo preferred; no invented factory evidence |
@@ -164,7 +176,7 @@ AVIF/WebP with suitable fallback, explicit width/height and sizes/srcset. Initia
 
 Every product JSON record includes image, alt, source/provenance and fallback. Missing or failed images resolve once to the local fallback without an error loop. Repeated image captions identify unavailable imagery clearly.
 
-Generated imagery may illustrate the cable-management context and must be marked illustrative in content/provenance. Never use generated imagery to claim an actual OBC factory, completed project, approval, manufacturing process, or exact SKU geometry. Product diagrams must come from a matched supplied source or remain unavailable. No images generated in this design-document phase.
+Generated imagery may illustrate the cable-management context and must be marked illustrative in content/provenance. Never use generated imagery to claim an actual OBC factory, completed project, approval, manufacturing process, or exact SKU geometry. Product diagrams must come from a matched supplied source or remain unavailable. The two implemented hero scenes are AI-generated illustrations, with provenance retained; they do not depict a verified OBC facility or exact product.
 
 ## 6. Pages and content hierarchy
 
@@ -175,7 +187,7 @@ Skip link; logo linked Home; Home, About Us, Products, Contact Us; one contextua
 ### Home `/`
 
 1. Header.
-2. Editorial first viewport: short kicker 'Cable management systems'; proposed headline 'Cable support systems. Built for your project.'; factual paragraph 'Explore cable trays, ladders, trunking and support accessories from Osos Al Benaa in Riyadh.' Primary 'Explore products'; secondary 'Enquire on WhatsApp'. One relevant industrial/product image, separate from text.
+2. Full-width manual image slider: headline 'The support behind every connection.' and current supporting copy from `src/locales/en.json`, in white over the blurred, darkened illustrative scene. Primary red 'Explore products' links to Products; secondary white 'Get to know OBC' links to About. Show sourced Riyadh/2022 context and an illustrative-image caption. Two images come from `site.heroSlides`; labeled previous/next controls wrap through them and a polite live count announces the active image. No autoplay. Keep copy and links available in initial static HTML, with the first image visible before hydration.
 3. Product-family navigation with actual catalog families and images.
 4. A compact company introduction: Riyadh base, manufacturing and custom fabrication from brochure pages 4–5. Link About Us.
 5. Featured products selected by explicit IDs in JSON, never invented best-seller rankings.
@@ -227,7 +239,7 @@ Readable missing-page message, links to Products and Home. A missing product rou
 | --- | --- |
 | Hierarchy / Gestalt proximity | Product name, attributes and action grouped; section boundaries larger than within-group gaps |
 | Hick's law | One main task per page; filters grouped by familiar product attributes |
-| Fitts's law | 44px minimum targets; 48px main buttons; remove icons have generous hit areas |
+| Fitts's law | 44px minimum targets; 50px main buttons; remove icons have generous hit areas |
 | Jakob's law | Familiar navigation, breadcrumb, search label and filter behavior |
 | Recognition over recall | Active selections remain visible; model and part numbers searchable |
 | Visibility of system status | Result count, active filters, validation messages and explicit WhatsApp handoff |
@@ -241,7 +253,7 @@ These are implementation decisions, not a claim that every UI law has been appli
 
 ## 9. Responsive, accessibility and motion
 
-Required test widths: 320, 390, 768, 1024, 1440px; check both short and long names. Do not rely on hover. At mobile, stack home copy then image; detail summary then image/specifications as dictated by reading order; contact details and form stack. No fixed-height text boxes. Tables reflow into label/value rows where possible; genuinely tabular content may use a labeled horizontal-scroll region without page-wide overflow.
+Required test widths: 320, 390, 768, 1024, 1440px; check both short and long names. Do not rely on hover. At mobile, retain the hero image behind the white copy and controls; stack detail summary then image/specifications as dictated by reading order; contact details and form stack. No fixed-height text boxes. Tables reflow into label/value rows where possible; genuinely tabular content may use a labeled horizontal-scroll region without page-wide overflow.
 
 WCAG 2.2 AA target: one H1, logical headings, semantic landmarks, decorative icons aria-hidden, meaningful labels and alt text, keyboard operability, 4.5:1 normal text contrast and 3:1 relevant UI boundaries. Icon-only actions have accessible names. Validation links errors with aria-describedby; focus first invalid field on submission. Form submissions never retain personal details in URL query strings or localStorage.
 
@@ -256,7 +268,7 @@ src/components/        shared UI only when actually reused
 src/pages/             Home, About, Products, ProductDetail, Contact, NotFound
 src/data/products.json stable IDs/slugs, every source row, family, specs, images
 src/data/company.json  factual company/contact content and confirmation status
-src/data/site.json     navigation, SEO base URL and locale metadata
+src/data/site.json     navigation, SEO base URL, locale metadata and heroSlides
 src/locales/en.json    UI labels, messages and page copy
 src/styles/            Tailwind theme and limited shared CSS
 src/entry-client.tsx   hydration and interactions
@@ -293,11 +305,15 @@ Implemented checks and actual outcomes are recorded in VALIDATION.md. These crit
 ## 12. Implemented system and handoff
 
 - React 19, TypeScript, Vite and Tailwind CSS. React server rendering produces 46 static HTML pages: four main pages, 41 product details and 404.
-- Barlow and Barlow Condensed are self-hosted, Latin subset, with original font licenses retained. Main container is 1280px with responsive gutters. Display sizes clamp from 44px to 80px; the mobile Home headline uses 58px (50px at the smallest width). Body is 16px/1.6. See src/styles.css for exact responsive values.
-- Buttons are 50px tall with 3px corners; product cards use 4px corners; fields are at least 48px tall. Filter selection pills use full corners, red text/border and pale red fill. Green is reserved for explicit WhatsApp actions. Primary red is #C81520, text #17202A, muted #5B6470, subtle surfaces #F4F5F6 and WhatsApp #087A43.
-- Home uses separate text and illustrative-image panels, a six-family catalog index, a sourced technical illustration, selected products and an enquiry close. Desktop and mobile preserve reading order and conventional navigation.
+- Barlow and Barlow Condensed are self-hosted, Latin subset, with original font licenses retained. Main container is 1280px with responsive gutters. Display sizes clamp from 44px to 80px; the Home headline uses clamp(48px, 5.8vw, 84px), with 52px below 640px. Body is 16px/1.6. See src/styles.css for exact responsive values.
+- Buttons are 50px tall with 3px corners; product cards use 8px corners; fields are at least 48px tall. Filter selection pills use full corners, red text/border and pale red fill. Green is reserved for explicit WhatsApp actions. Primary red is #C81520, text #17202A, muted #5B6470, subtle surfaces #F4F5F6 and WhatsApp #087A43.
+- Home uses the approved full-width hero slider with white overlay content, slight image blur, red primary and white secondary actions, followed by boxed sections: a six-family catalog index, sourced technical illustration/company introduction, selected products and an enquiry close. Desktop and mobile preserve reading order and conventional navigation.
 - Main pages are separate modules. Shared navigation/footer, product imagery/cards, breadcrumbs and enquiry band are reusable components. Search state uses React and the URL; no state/search/animation library was added.
-- 28 products have source-matched images and 13 use the explicit fallback. Category illustrations are source-derived where available; Cable trunking retains a fallback. One generated hero image is labeled illustrative, with responsive exports and provenance. The private full brochure is not published.
+- 28 products have source-matched images and 13 use the explicit fallback. Category illustrations are source-derived where available; Cable trunking retains a fallback. Two generated hero scenes are labeled illustrative, with responsive exports and provenance; `site.heroSlides` owns their image paths/srcsets and `en.json` owns labels and copy. The private full brochure is not published.
 - Default canonical domain is https://www.ososalbenaa.com from the brochure. Override SITE_URL at build time or edit canonicalOrigin before deploying elsewhere. Build emits sitemap, robots, page-specific metadata and factual structured data.
 - Brochure telephone is used for enquiry links. WhatsApp registration and message delivery remain unverified; no messages were sent. Certificate validity/entity alignment is unverified and certification claims are not published.
 - All screenshots and automated checks refer to a local static production build, not a deployed production domain. Source publication is recorded in Git history.
+
+### Hero delivery refinement
+
+Responsive AVIF sources keep WebP fallback. The first scene is preloaded on Home; client hydration is low-priority. Only the initial scene is rendered initially. Selecting another scene loads it on demand; the first scene stays underneath during decode to prevent an empty background. Layout, 1.5px blur, solid readability overlay and white/red CTA hierarchy are unchanged.

@@ -40,7 +40,7 @@ python3 -m http.server 4173 --directory dist
 | --- | --- |
 | `src/data/products.json` | All 41 products, stable IDs/slugs, manufacturer/origin, descriptions, specifications, facet values, image paths and source-row provenance |
 | `src/data/company.json` | Company introduction, capabilities, address, phone, WhatsApp destination and verification status |
-| `src/data/site.json` | Navigation, product families, featured product IDs, locale metadata, canonical domain and copyright year |
+| `src/data/site.json` | Navigation, product families, featured product IDs, hero image slides, locale metadata, canonical domain and copyright year |
 | `src/locales/en.json` | English UI labels, page copy, image descriptions, validation messages, WhatsApp message templates and SEO text |
 | `public/images/provenance.json` | Source and generation provenance for images |
 
@@ -74,8 +74,16 @@ Unit tests cover source-row retention, search, combined facets, URL state and Wh
 
 ## Assets and design
 
-`design.md` records the design decisions. Brand/logo and matched product illustrations come from the supplied brochure. The hero is AI-generated and visibly described as illustrative; it does not depict a verified OBC facility. Some products intentionally use the neutral fallback rather than an incorrect product photo. The full brochure is not published because it contains administrative and approval documents. Self-hosted Barlow fonts retain their upstream OFL licenses; Lucide icons use ISC licensing.
+`design.md` records the design decisions. Brand/logo and matched product illustrations come from the supplied brochure. The two hero images are AI-generated and visibly described as illustrative; they do not depict a verified OBC facility. Some products intentionally use the neutral fallback rather than an incorrect product photo. The full brochure is not published because it contains administrative and approval documents. Self-hosted Barlow fonts retain their upstream OFL licenses; Lucide icons use ISC licensing.
 
 The user authorized proceeding with the brand-derived design despite blocked live reference research. No claim is made that Pinterest, Dribbble, Behance, Awwwards or Google references were reviewed. Vercel React Best Practices, Impeccable and Ponytail instructions were read from the user-provided public repositories and used for this work; no telemetry hooks were installed.
 
 See the Git history for source publication. Production deployment and domain ownership have not been verified.
+
+## Selected UI: Option B with an overlay hero
+
+The user selected the red-led reference with a full-width hero instead of the reference's split layout. A lightly blurred background image (1.5px) sits under a solid dark readability overlay; white headings/body and a red primary CTA/white secondary CTA are rendered over it. Responsive AVIF sources have WebP fallback. Only the first scene loads initially; later scenes load on selection while the first scene remains underneath during decoding. Previous/next buttons change the image manually and announce its index; there is no autoplay or carousel dependency. The first image and all hero content exist in prerendered HTML and remain visible without JavaScript.
+
+Edit `heroSlides` in `src/data/site.json` to change the image list and responsive source sets. Keep at least one slide and retain an honest illustrative caption in `src/locales/en.json`. Generated-image source/prompt provenance remains in `public/images/provenance.json`.
+
+Separate white section panels sit on a soft-gray canvas. Blue headings come from the logo; red denotes primary actions and links; green is reserved for WhatsApp. Product cards have subtle downward shadows and 8px corners; major panels have 12px corners (10px on mobile). No gradients are used.

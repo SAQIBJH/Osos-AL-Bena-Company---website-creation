@@ -23,7 +23,11 @@
     "featuredTitle": "Explore the details.",
     "featuredIntro": "A closer look at our cable management range.",
     "location": "Riyadh, Saudi Arabia",
-    "since": "Established in 2022"
+    "since": "Established in 2022",
+    "sliderLabel": "Cable management systems — illustrative image gallery",
+    "previousSlide": "Previous hero image",
+    "nextSlide": "Next hero image",
+    "slide": "Image"
   },
   "about": {
     "title": "Practical engineering.\nPersonal commitment.",

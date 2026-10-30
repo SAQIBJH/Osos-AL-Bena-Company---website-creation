@@ -1,4 +1,5 @@
-import { ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { HeroSlider } from "../components/HeroSlider";
 import company from "../data/company.json";
 import site from "../data/site.json";
 import t from "../locales/en.json";
@@ -7,44 +8,7 @@ import { EnquiryBand, ProductCard } from "../components/UI";
 export function Home() {
   return (
     <>
-      <section className="home-hero container">
-        <div className="hero-copy">
-          <h1>{t.home.title}</h1>
-          <p>{t.home.intro}</p>
-          <div className="hero-actions">
-            <a className="button" href="/products/">
-              {t.actions.explore}
-              <ArrowUpRight size={20} />
-            </a>
-            <a className="text-link" href="/about/">
-              {t.home.aboutLink}
-              <ArrowRight size={18} />
-            </a>
-          </div>
-          <div className="hero-origin">
-            <MapPin size={16} />
-            <span>{t.home.location}</span>
-            <span className="origin-line" />
-            <span>{t.home.since}</span>
-          </div>
-        </div>
-        <figure className="hero-figure">
-          <img
-            src="/images/hero.webp"
-            srcSet="/images/hero-640.webp 640w, /images/hero-960.webp 960w, /images/hero.webp 1440w"
-            sizes="(max-width: 639px) calc(100vw - 40px), (max-width: 1439px) 48vw, 620px"
-            alt={t.images.heroAlt}
-            width="1440"
-            height="960"
-            fetchPriority="high"
-          />
-          <figcaption>{t.home.imageCaption}</figcaption>
-          <div className="hero-image-label" aria-hidden="true">
-            {company.brand}
-            <span>{t.common.heroLabel}</span>
-          </div>
-        </figure>
-      </section>
+      <HeroSlider />
       <section className="range-section section">
         <div className="container">
           <div className="section-heading">

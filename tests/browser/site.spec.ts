@@ -98,7 +98,13 @@ test("mobile menu, filter dialog and focus return", async ({ page }) => {
   await trigger.click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.getByRole("dialog")).toHaveAccessibleName("Filters");
-  expect((await new AxeBuilder({page}).withTags(["wcag2a","wcag2aa","wcag21aa","wcag22aa"]).analyze()).violations).toEqual([]);
+  expect(
+    (
+      await new AxeBuilder({ page })
+        .withTags(["wcag2a", "wcag2aa", "wcag21aa", "wcag22aa"])
+        .analyze()
+    ).violations,
+  ).toEqual([]);
   await page
     .getByRole("dialog")
     .getByLabel("Cable cleats", { exact: true })
@@ -147,4 +153,53 @@ test("responsive views have no overflow and pass automated accessibility", async
       .analyze();
     expect(result.violations).toEqual([]);
   }
+});
+
+test("full-width hero uses readable overlay, branded CTAs and manual slider", async ({
+  page,
+  browser,
+}) => {
+  await page.goto("/");
+  const hero = page.getByRole("region", {
+    name: "Cable management systems — illustrative image gallery",
+  });
+  await expect(hero.locator("h1")).toBeVisible();
+  await expect(hero.locator("img")).toHaveCount(1);
+  const first = hero.locator(".hero-slide.is-active");
+  await expect(first).toHaveAttribute("src", "/images/hero.webp");
+  await hero.getByRole("button", { name: "Next hero image" }).click();
+  await expect(hero.locator(".hero-slide.is-active")).toHaveAttribute(
+    "src",
+    "/images/hero-secondary.webp",
+  );
+  await expect(hero.locator(".hero-slide-count")).toContainText("2 / 2");
+  await hero.getByRole("button", { name: "Next hero image" }).click();
+  await expect(hero.locator(".hero-slide-count")).toContainText("1 / 2");
+  await hero.getByRole("button", { name: "Previous hero image" }).click();
+  await expect(hero.locator(".hero-slide-count")).toContainText("2 / 2");
+  await expect(hero.locator("h1")).toHaveCSS("color", "rgb(255, 255, 255)");
+  await expect(hero.getByRole("link", { name: "Explore products" })).toHaveCSS(
+    "background-color",
+    "rgb(200, 21, 32)",
+  );
+  await expect(hero.getByRole("link", { name: "Get to know OBC" })).toHaveCSS(
+    "background-color",
+    "rgb(255, 255, 255)",
+  );
+  await expect(hero.locator(".hero-slide.is-active")).toHaveCSS(
+    "filter",
+    "blur(1.5px)",
+  );
+  for (const width of [320, 390, 768, 1440]) {
+    await page.setViewportSize({ width, height: 960 });
+    const rect = await hero.boundingBox();
+    expect(rect?.x).toBe(0);
+    expect(rect?.width).toBe(width);
+  }
+  const context = await browser.newContext({ javaScriptEnabled: false });
+  const staticPage = await context.newPage();
+  await staticPage.goto("/");
+  await expect(staticPage.locator(".hero-copy h1")).toBeVisible();
+  await expect(staticPage.locator(".hero-slide.is-active")).toBeVisible();
+  await context.close();
 });

@@ -21,6 +21,9 @@ for (const p of products) {
   slugs.add(p.slug);
   await access("public" + (p.image || "/images/product-fallback.svg"));
 }
+if (!site.heroSlides.length)
+  throw Error("Add at least one hero slide in site.json.");
+for (const slide of site.heroSlides) await access("public" + slide.image);
 const escape = (v: string) =>
   v.replace(
     /[&<>"']/g,
@@ -92,19 +95,42 @@ for (const path of routes) {
   let head = `<meta name="description" content="${escape(description)}"><meta property="og:title" content="${escape(title)}"><meta property="og:description" content="${escape(description)}"><meta property="og:type" content="website">`;
   if (url)
     head += `<link rel="canonical" href="${escape(url)}"><meta property="og:url" content="${escape(url)}">`;
-  if(origin){
-    const image=new URL(product?.image||"/images/hero.webp",origin).href;
-    head+=`<meta property="og:image" content="${escape(image)}"><meta name="twitter:card" content="summary_large_image">`;
-    if(path!=="/"&&path!=="/404.html"){
-      const current=product?.name||site.nav.find(n=>n.href===path)?.label||title;
-      const crumbs=[{name:t.common.home,path:"/"},...(product?[{name:t.common.products,path:"/products/"}]:[]),{name:current,path}];
-      const breadcrumb={"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:crumbs.map((c,i)=>({"@type":"ListItem",position:i+1,name:c.name,item:new URL(c.path,origin).href}))};
-      head+=`<script type="application/ld+json">${JSON.stringify(breadcrumb).replace(/</g,"\\u003c")}</script>`;
+  if (origin) {
+    const image = new URL(product?.image || "/images/hero.webp", origin).href;
+    head += `<meta property="og:image" content="${escape(image)}"><meta name="twitter:card" content="summary_large_image">`;
+    if (path !== "/" && path !== "/404.html") {
+      const current =
+        product?.name || site.nav.find((n) => n.href === path)?.label || title;
+      const crumbs = [
+        { name: t.common.home, path: "/" },
+        ...(product ? [{ name: t.common.products, path: "/products/" }] : []),
+        { name: current, path },
+      ];
+      const breadcrumb = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: crumbs.map((c, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: c.name,
+          item: new URL(c.path, origin).href,
+        })),
+      };
+      head += `<script type="application/ld+json">${JSON.stringify(breadcrumb).replace(/</g, "\\u003c")}</script>`;
     }
   }
   if (path === "/404.html") head += '<meta name="robots" content="noindex">';
   head += `<script type="application/ld+json">${JSON.stringify(structured).replace(/</g, "\\u003c")}</script>`;
+  const heroPreload =
+    path === "/"
+      ? `<link rel="preload" as="image" type="image/avif" imagesrcset="${escape(site.heroSlides[0].avifSrcSet)}" imagesizes="100vw" fetchpriority="high">`
+      : "";
   const html = template
+    .replace("</title>", () => "</title>" + heroPreload)
+    .replace(
+      '<script type="module"',
+      '<script type="module" fetchpriority="low"',
+    )
     .replace(/<title>.*?<\/title>/, () => `<title>${escape(title)}</title>`)
     .replace("</head>", () => head + "</head>")
     .replace(

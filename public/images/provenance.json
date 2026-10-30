@@ -39,5 +39,18 @@
   "ladders.webp": "Supplied Brochure.pdf page 81; cropped technical illustration, dimensions must be confirmed.",
   "channels.webp": "Supplied Brochure.pdf page 89; cropped technical illustration, dimensions must be confirmed.",
   "hero-640.webp": "Responsive derivative of hero.webp; same generated illustration and prompt.",
-  "hero-960.webp": "Responsive derivative of hero.webp; same generated illustration and prompt."
+  "hero-960.webp": "Responsive derivative of hero.webp; same generated illustration and prompt.",
+  "hero-secondary.webp": {
+    "kind": "AI-generated illustrative industrial scene",
+    "original": "/workspace/generated_images/exec-cfdf0d9a-1804-41ff-a1a7-95e4ea4150f8.png",
+    "prompt": "Photorealistic architectural industrial editorial photograph, landscape 3:2. Long precision galvanized steel cable ladder and perforated cable tray routing overhead through a modern clean large industrial building, diagonal perspective into depth, wide composition, brushed silver metal, realistic fastening and supporting struts, soft daylight and deep neutral shadows. No people, no text, no letters, no logo, no watermark, no charts, no graphic overlays. Generic illustrative industrial environment, not any specific company's actual factory. The LEFT HALF should be quiet darker industrial space with low visual clutter for a later website text overlay, cable tray structure strongest on the RIGHT. Premium restrained international engineering photography. Entire image sharp; blur will be applied in CSS."
+  },
+  "hero-secondary-640.webp": "Responsive derivative of hero-secondary.webp; same illustrative image and prompt.",
+  "hero-secondary-960.webp": "Responsive derivative of hero-secondary.webp; same illustrative image and prompt.",
+  "hero-640.avif": "AVIF delivery derivative of hero-640.webp; same source scene and provenance.",
+  "hero-960.avif": "AVIF delivery derivative of hero-960.webp; same source scene and provenance.",
+  "hero.avif": "AVIF delivery derivative of hero.webp; same source scene and provenance.",
+  "hero-secondary-640.avif": "AVIF delivery derivative of hero-secondary-640.webp; same source scene and provenance.",
+  "hero-secondary-960.avif": "AVIF delivery derivative of hero-secondary-960.webp; same source scene and provenance.",
+  "hero-secondary.avif": "AVIF delivery derivative of hero-secondary.webp; same source scene and provenance."
 }
